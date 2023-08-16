@@ -1,0 +1,4 @@
+@startuml
+!include C:\Users\filip\Documents\faculdade\Programacao Orientada a Objetos\Trabalho Final POO\teste hibernate\ProjetoPOO\src\main\java\com\petway\entidades\AuxiliarLimpeza.java
+!include C:\Users\filip\Documents\faculdade\Programacao Orientada a Objetos\Trabalho Final POO\teste hibernate\ProjetoPOO\src\main\java\com\petway\entidades\AuxiliarVeterinario.java
+@enduml

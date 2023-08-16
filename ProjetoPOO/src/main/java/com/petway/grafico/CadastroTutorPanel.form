@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.petway.grafico.CadastroTutorPanel">
+  <grid id="27dc6" binding="PainelPrincipal" layout-manager="GridLayoutManager" row-count="10" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="852" height="613"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <vspacer id="b1845">
+        <constraints>
+          <grid row="2" column="4" row-span="7" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="fb2af" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="Cadastro de Tutor"/>
+        </properties>
+      </component>
+      <component id="5ab2a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Digite o Nome :"/>
+        </properties>
+      </component>
+      <component id="63ea" class="javax.swing.JTextField" binding="entradaNome">
+        <constraints>
+          <grid row="2" column="1" row-span="2" col-span="3" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="-1"/>
+            <preferred-size width="600" height="-1"/>
+            <maximum-size width="800" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="bb977" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Digite o CPF :"/>
+        </properties>
+      </component>
+      <component id="c4fd5" class="javax.swing.JTextField" binding="entradaCPF">
+        <constraints>
+          <grid row="5" column="1" row-span="2" col-span="3" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="-1"/>
+            <preferred-size width="600" height="-1"/>
+            <maximum-size width="800" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="30"/>
+          <enabled value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="b430c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Digite o Endereço :"/>
+        </properties>
+      </component>
+      <component id="b9441" class="javax.swing.JTextField" binding="entradaEndereco">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="200" height="-1"/>
+            <preferred-size width="600" height="-1"/>
+            <maximum-size width="800" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <columns value="30"/>
+          <enabled value="true"/>
+        </properties>
+      </component>
+      <vspacer id="2bd4f">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="b06c7">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="55927">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="3a287">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="7ba09" class="javax.swing.JButton" binding="FinalizarCadastro">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Finalizar Cadastro"/>
+        </properties>
+      </component>
+      <component id="731fd" class="javax.swing.JButton" binding="Fechar">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Fechar Página"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

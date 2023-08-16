@@ -1,0 +1,261 @@
+@startuml
+abstract class com.petway.entidades.Funcionario {
+- String CPF
+- String Nome
+- LocalDate Data_Nasc
+- double Remuneracao
+- LocalDate Data_Entrada
++ <<Create>> Funcionario(String,String,double,LocalDate,LocalDate)
++ <<Create>> Funcionario()
++ {abstract}Funcionario criaFuncionario(String,String,double,LocalDate,LocalDate)
++ Funcionario pesquisaFuncionario(String)
++ {abstract}boolean removeFuncionario(String)
++ boolean salvar()
++ String getNome()
++ String getCPF()
++ double getRemuneracao()
++ LocalDate getData_Entrada()
++ LocalDate getData_Nasc()
++ void setNome(String)
++ void setCPF(String)
++ void setData_Entrada(LocalDate)
++ void setData_Nasc(LocalDate)
++ void setRemuneracao(double)
++ String toString()
+}
+class com.petway.entidades.Veterinario {
+- String CRMV
+- {static} String cargo
++ <<Create>> Veterinario(String,String,double,LocalDate,LocalDate)
++ <<Create>> Veterinario()
++ Funcionario criaFuncionario(String,String,double,LocalDate,LocalDate)
++ Funcionario pesquisaFuncionario(String)
++ boolean removeFuncionario(String)
++ String toString()
++ String getCRMV()
++ void setCRMV(String)
++ {static} String getCargo()
+}
+class com.petway.entidades.Gerente {
+- {static} String cargo
++ <<Create>> Gerente(String,String,double,LocalDate,LocalDate)
++ <<Create>> Gerente()
++ Funcionario criaFuncionario(String,String,double,LocalDate,LocalDate)
++ Funcionario pesquisaFuncionario(String)
++ boolean removeFuncionario(String)
++ String toString()
++ {static} String getCargo()
+}
+class com.petway.entidades.AuxiliarVeterinario {
+- {static} String cargo
++ <<Create>> AuxiliarVeterinario(String,String,double,LocalDate,LocalDate)
++ <<Create>> AuxiliarVeterinario()
++ Funcionario criaFuncionario(String,String,double,LocalDate,LocalDate)
++ Funcionario pesquisaFuncionario(String)
++ boolean removeFuncionario(String)
++ String toString()
++ {static} String getCargo()
+}
+class com.petway.entidades.Consulta {
+- int IDConsulta
+- LocalTime Horario
+- LocalDate Data
+- double Valor
+- Veterinario veterinario
+- Pet pet
+- Tutor tutor
+- <<Create>> Consulta(LocalTime,LocalDate,double,Veterinario,Pet)
++ <<Create>> Consulta()
++ {static} Consulta criaConsulta(LocalTime,LocalDate,double,Veterinario,Pet)
++ {static} Consulta pesquisaConsulta(int)
++ {static} boolean removeConsulta(int)
++ boolean salvar()
++ void setVeterinario(Veterinario)
++ void setPet(Pet)
++ void setValor(double)
++ LocalTime getHorario()
++ void setHorario(LocalTime)
++ LocalDate getData()
++ void setData(LocalDate)
++ Pet getPet()
++ double getValor()
++ Veterinario getVeterinario()
++ int getIDConsulta()
++ String toString()
+}
+class com.petway.entidades.Exame {
+- int IDExame
+- String Tipo
+- String Laudo
+- double Valor
+- LocalDate Data
+- LocalTime Horario
+- Consulta consulta
+- <<Create>> Exame(String,String,LocalDate,LocalTime,Consulta,double)
++ <<Create>> Exame()
++ {static} Exame criaExame(String,String,LocalDate,LocalTime,Consulta,double)
++ {static} Exame pesquisaExame(int)
++ {static} boolean removeExame(int)
++ boolean salvar()
++ String toString()
++ int getIDExame()
++ String getTipo()
++ String getLaudo()
++ double getValor()
++ LocalDate getData()
++ LocalTime getHorario()
++ Consulta getConsulta()
++ void setTipo(String)
++ void setLaudo(String)
++ void setValor(double)
++ void setData(LocalDate)
++ void setHorario(LocalTime)
++ void setConsulta(Consulta)
+}
+class com.petway.entidades.AuxiliarLimpeza {
+- {static} String cargo
++ <<Create>> AuxiliarLimpeza(String,String,double,LocalDate,LocalDate)
++ <<Create>> AuxiliarLimpeza()
++ Funcionario criaFuncionario(String,String,double,LocalDate,LocalDate)
++ Funcionario pesquisaFuncionario(String)
++ boolean removeFuncionario(String)
++ String toString()
++ {static} String getCargo()
+}
+class com.petway.entidades.Tutor {
+- String CPF
+- String Endr
+- String Nome
++ <<Create>> Tutor()
+- <<Create>> Tutor(String,String,String)
++ {static} Tutor criaTutor(String,String,String)
++ {static} Tutor pesquisaTutorCPF(String)
++ {static} boolean removeTutor(String)
++ boolean salvar()
++ String getCPF()
++ String getEndr()
++ String getNome()
++ void setCPF(String)
++ void setEndr(String)
++ void setNome(String)
++ String toString()
+}
+class com.petway.entidades.Internacao {
+- int IDInternacao
+- LocalDate dataSaida
+- LocalDate dataInicio
+- double valor
+- Consulta consulta
+- <<Create>> Internacao(LocalDate,LocalDate,double,Consulta)
++ <<Create>> Internacao()
++ {static} Internacao criaInternacao(LocalDate,LocalDate,double,Consulta)
++ {static} Internacao pesquisaInternacao(int)
++ {static} boolean removeInternacao(int)
++ boolean salvar()
++ int getIDInternacao()
++ LocalDate getDataSaida()
++ void setDataSaida(LocalDate)
++ LocalDate getDataInicio()
++ void setDataInicio(LocalDate)
++ double getValor()
++ void setValor(double)
++ Consulta getConsulta()
++ void setConsulta(Consulta)
++ String toString()
+}
+class com.petway.entidades.Pet {
+- int IDPet
+- String Nome
+- String Especie
+- String Raca
+- String Sexo
+- LocalDate Data_Nasc
+- Tutor tutor
+- <<Create>> Pet(String,String,String,LocalDate,Tutor,String)
++ <<Create>> Pet()
++ {static} Pet criaPet(String,String,String,LocalDate,Tutor,String)
++ {static} Pet pesquisaPet(int)
++ {static} boolean removePet(int)
++ boolean salvar()
++ int getIDPet()
++ String getNome()
++ LocalDate getData_Nasc()
++ String getRaca()
++ String getEspecie()
++ Tutor getTutor()
++ void setTutor(Tutor)
++ String getSexo()
++ void setSexo(String)
++ void setNome(String)
++ void setEspecie(String)
++ void setRaca(String)
++ void setData_Nasc(LocalDate)
++ String toString()
+}
+class com.petway.entidades.Prontuario {
+- int idProntuario
+- String medAplicada
+- LocalDateTime dataHora
+- String alimentacoes
+- String pressao
+- double temp
+- Internacao internacao
++ <<Create>> Prontuario()
+- <<Create>> Prontuario(String,LocalDateTime,String,String,double,Internacao)
++ {static} Prontuario criaProntuario(String,LocalDateTime,String,String,double,Internacao)
++ {static} Prontuario pesquisaProntuario(int)
++ {static} boolean removeProntuario(int)
++ boolean salvar()
++ ObsProntuario criarObservacao(String)
++ int getIdProntuario()
++ void setIdProntuario(int)
++ String getMedAplicada()
++ void setMedAplicada(String)
++ LocalDateTime getDataHora()
++ void setDataHora(LocalDateTime)
++ String getAlimentacoes()
++ void setAlimentacoes(String)
++ String getPressao()
++ void setPressao(String)
++ double getTemp()
++ void setTemp(double)
++ Internacao getInternacao()
++ void setInternacao(Internacao)
++ String toString()
+}
+class com.petway.entidades.ObsProntuario {
+- int idProntuario
+- String observacao
+- Prontuario prontuario
++ <<Create>> ObsProntuario()
+- <<Create>> ObsProntuario(String,Prontuario)
++ {static} ObsProntuario criaObservacao(String,Prontuario)
++ {static} ObsProntuario pesquisaObservacao(int)
++ {static} boolean removeObservacao(int)
++ boolean salvar()
++ int getIdProntuario()
++ void setIdProntuario(int)
++ String getObservacao()
++ void setObservacao(String)
++ Prontuario getProntuario()
++ void setProntuario(Prontuario)
++ String toString()
+}
+class com.petway.entidades.Recepcionista {
+- {static} String cargo
++ <<Create>> Recepcionista(String,String,double,LocalDate,LocalDate)
++ <<Create>> Recepcionista()
++ Funcionario criaFuncionario(String,String,double,LocalDate,LocalDate)
++ Funcionario pesquisaFuncionario(String)
++ boolean removeFuncionario(String)
++ String toString()
++ {static} String getCargo()
+}
+
+
+com.petway.entidades.Funcionario <|-- com.petway.entidades.Veterinario
+com.petway.entidades.Funcionario <|-- com.petway.entidades.Gerente
+com.petway.entidades.Funcionario <|-- com.petway.entidades.AuxiliarVeterinario
+com.petway.entidades.Funcionario <|-- com.petway.entidades.AuxiliarLimpeza
+com.petway.entidades.Funcionario <|-- com.petway.entidades.Recepcionista
+@enduml
