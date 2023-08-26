@@ -25,5 +25,6 @@ O sistema deve oferecer funções como:
 • Consulta de veterinários por nome, cpf ou especialidades.
 • Consulta de pets atendidos por um veterinário.
 • Consulta de tutores com conta em aberto.
-• Dar baixa em contas em aberto.
 • Cadastro de funcionários e consulta de dados.
+# Tecnologias:
+Para o desenvolvimento do projeto foi utilizado o ambiente do Intellij IDEA, maven para gerenciamento do projeto, JPA e Hibernate para persistência dos dados cadastrados em um banco de dados MySQL. Além disso para o desenvilvimento da interface gráfica foi utilizada a biblioteca Swing do Java e as ferramentas de GUI do próprio IntelliJ.
